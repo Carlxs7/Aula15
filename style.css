@@ -1,0 +1,195 @@
+/* CSS aprimorado com melhor organização, responsividade e estrutura limpa */
+
+/* ====== PALETA: Roxo moderno, azul suave e cinza premium ====== */
+:root {
+    --primario: #6c4bff;
+    --primario-hover: #5936f7;
+    --texto: #2d2d3a;
+    --subtexto: #6f7380;
+    --borda: #cfcfe8;
+    --fundo-input: #fafaff;
+
+    --cor-abaixo: #7db7ff;
+    --bg-abaixo: #eaf2ff;
+
+    --cor-normal: #4cd1a1;
+    --bg-normal: #e8fdf5;
+
+    --cor-sobrepeso: #ffd76e;
+    --bg-sobrepeso: #fff8e4;
+
+    --cor-ob1: #ffae5f;
+    --bg-ob1: #fff0df;
+
+    --cor-ob2: #ff7a7a;
+    --bg-ob2: #ffe3e3;
+
+    --cor-ob3: #e04646;
+    --bg-ob3: #fcd0d0;
+
+    --cor-erro: #ff5e5e;
+    --bg-erro: #ffe1e1;
+}
+
+/* ====== ESTRUTURA BASE ====== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--primario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: var(--texto);
+    gap: 7rem;
+    flex-wrap: wrap;
+}
+
+/* Ajuste para o Spline */
+spline-viewer {
+    width: 420px;   /* aumenta a largura */
+    height: 420px;  /* aumenta a altura */
+    border-radius: 12px;
+}
+
+
+@media (max-width: 850px) {
+    body {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+/* ====== COMPONENTE CALCULADORA ====== */
+.calculator-container {
+    background-color: #ffffff;
+    padding: 2rem 3rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    border: 1px solid #e4e4f0;
+}
+
+h1 {
+    color: var(--primario);
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: var(--subtexto);
+    margin-bottom: 2rem;
+}
+
+/* ====== CAMPOS DE FORMULÁRIO ====== */
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #3d3d4f;
+}
+
+input {
+    width: 100%;
+    padding: 0.85rem;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: var(--fundo-input);
+    transition: 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primario);
+    box-shadow: 0 0 6px rgba(108, 75, 255, 0.4);
+}
+
+/* ====== BOTÃO ====== */
+button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primario);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.15rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--primario-hover);
+    box-shadow: 0 4px 12px rgba(108, 75, 255, 0.35);
+}
+
+/* ====== RESULTADO ====== */
+#resultado-container {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    transition: 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+.resultado-imc {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+#valor-imc {
+    font-weight: bold;
+}
+
+.resultado-classificacao {
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+/* ====== CORES DAS CLASSIFICAÇÕES ====== */
+.abaixo-peso {
+    border-color: var(--cor-abaixo);
+    background-color: var(--bg-abaixo);
+}
+
+.normal {
+    border-color: var(--cor-normal);
+    background-color: var(--bg-normal);
+}
+
+.sobrepeso {
+    border-color: var(--cor-sobrepeso);
+    background-color: var(--bg-sobrepeso);
+}
+
+.obesidade-1 {
+    border-color: var(--cor-ob1);
+    background-color: var(--bg-ob1);
+}
+
+.obesidade-2 {
+    border-color: var(--cor-ob2);
+    background-color: var(--bg-ob2);
+}
+
+.obesidade-3 {
+    border-color: var(--cor-ob3);
+    background-color: var(--bg-ob3);
+}
+
+.erro {
+    border-color: var(--cor-erro);
+    background-color: var(--bg-erro);
+}
